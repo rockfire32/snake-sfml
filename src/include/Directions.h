@@ -5,6 +5,7 @@ namespace SnakeSfml
 {
 	enum class Direction
 	{
+		NONE,
 		UP,
 		DOWN,
 		LEFT,
