@@ -24,17 +24,18 @@ void Snake::SetDirection(const Direction dir) {
 	dir_ = dir;
 }
 
-const std::vector<sf::Vector2f>& GetPosOfSnakeElements() const {
+const std::vector<sf::Vector2f>& Snake::GetPosOfSnakeElements() const {
 	return pos_;
 }
 
 void Snake::MoveHead(sf::Vector2f& head) {
 	switch ( dir_ )
 	{
-		case Direction::UP: head.y() -= step_; break;	
-		case Direction::DOWN: head.y() += step_; break;	
-		case Direction::LEFT: head.x() -= step_; break;	
-		case Direction::RIGHT: head.x() += step_; break;	
+		case Direction::UP: head.y -= step_; break;	
+		case Direction::DOWN: head.y += step_; break;	
+		case Direction::LEFT: head.x -= step_; break;	
+		case Direction::RIGHT: head.x += step_; break;
+		case Direction::NONE: break;
 	}
 }
 
