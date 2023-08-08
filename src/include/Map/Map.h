@@ -10,6 +10,8 @@
 
 namespace SnakeSfml
 {
+	using MapType = std::vector<Object>;
+
 	class Map
 	{
 		public:
@@ -19,7 +21,8 @@ namespace SnakeSfml
 		private:
 			size_t map_max_x_ = 0;
 			size_t map_max_y_ = 0;
-			std::vector<Object> map_;
+
+			MapType map_;
 	};
 }
 
